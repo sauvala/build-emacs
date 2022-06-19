@@ -55,7 +55,7 @@ jobs:
         run: make install
         working-directory: ./emacs
 
-      - name: Create a release
+      - name: Create release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'main')
         with:
