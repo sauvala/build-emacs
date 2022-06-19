@@ -36,6 +36,9 @@ jobs:
       - name: Install dependencies
         run: brew bundle --file Brewfile
 
+      - name: Start dbus
+        run: brew services start dbus
+
       - name: Run autogen
         run: ./autogen.sh
         working-directory: ./emacs
