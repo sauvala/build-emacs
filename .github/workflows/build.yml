@@ -33,7 +33,11 @@ jobs:
           ref: 'master'
           path: 'emacs'
 
-      - name: Install dependencies
+      # Remove the preinstalled packages to reduce unwanted side-effects
+      - name: Remove preinstalled brew packages
+        run: brew remove --force --ignore-dependencies $(brew list --formula)
+
+      - name: Install brew packages
         run: brew bundle --file Brewfile
 
       - name: Start dbus
