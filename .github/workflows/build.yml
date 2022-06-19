@@ -31,4 +31,4 @@ jobs:
           path: 'emacs'
 
       - name: Install dependencies
-        run: brew Brewfile
+        run: brew bundle --file Brewfile
