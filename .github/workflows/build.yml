@@ -43,3 +43,7 @@ jobs:
       - name: Run configure
         run: ./configure --with-native-compilation --with-json --with-mailutils --with-xwidgets --with-imagemagick
         working-directory: ./emacs
+
+      - name: Run make
+        run: make -j $(nproc)
+        working-directory: ./emacs
