@@ -35,6 +35,8 @@ jobs:
 
       - name: Run autogen
         run: ./autogen.sh
+        working-directory: ./emacs
 
       - name: Run configure
         run: ./configure --with-native-compilation --with-json --with-mailutils --with-xwidgets --with-imagemagick
+        working-directory: ./emacs
