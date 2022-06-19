@@ -32,3 +32,9 @@ jobs:
 
       - name: Install dependencies
         run: brew bundle --file Brewfile
+
+      - name: Run autogen
+        run: ./autogen.sh
+
+      - name: Run configure
+        run: ./configure --with-native-compilation --with-json --with-mailutils --with-xwidgets --with-imagemagick
